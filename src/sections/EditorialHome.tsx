@@ -84,7 +84,9 @@ export function EditorialHome() {
             <div className="container-pad">
               <Reveal>
                 <div className="max-w-3xl text-white">
-                  <div className="kicker text-white/80">Harishshankar Photography</div>
+                  <div className="inline-flex items-center rounded-full bg-sand-50/85 px-4 py-2 backdrop-blur ring-1 ring-black/10">
+                    <div className="kicker text-noir-900">Harishshankar Photography</div>
+                  </div>
                   <h1 className="mt-4 font-caps text-4xl leading-[1.02] tracking-[0.08em] sm:text-6xl">
                     Capturing love stories with restraint, warmth, and cinema.
                   </h1>
