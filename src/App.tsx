@@ -4,6 +4,7 @@ import { IntroLoader } from './components/IntroLoader'
 import { SiteHeader } from './components/SiteHeader'
 import { EditorialHome } from './sections/EditorialHome'
 import { FilmsAndContact } from './sections/FilmsAndContact'
+import { InstagramEmbedsSection } from './sections/InstagramEmbedsSection'
 
 function App() {
   const [ready, setReady] = useState(false)
@@ -14,11 +15,14 @@ function App() {
   }, [])
 
   return (
-    <div className="min-h-dvh bg-white text-neutral-900">
+    <div className="min-h-dvh bg-sand-50 text-noir-900">
       <AnimatePresence>{!ready ? <IntroLoader /> : null}</AnimatePresence>
 
       <SiteHeader />
       <EditorialHome />
+      <div id="portfolio">
+        <InstagramEmbedsSection />
+      </div>
       <FilmsAndContact />
     </div>
   )

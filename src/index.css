@@ -3,7 +3,7 @@
 
 @layer base {
   :root {
-    --page-bg: #ffffff;
+    --page-bg: #fbf7f1;
   }
 
   html {
@@ -12,7 +12,7 @@
   }
 
   body {
-    @apply bg-white font-sans text-neutral-900 antialiased;
+    @apply bg-sand-50 font-sans text-noir-900 antialiased;
   }
 
   ::selection {
@@ -24,11 +24,13 @@
   .container-pad { @apply mx-auto w-full max-w-7xl px-5 sm:px-7 lg:px-10; }
   .section-pad { @apply py-14 sm:py-16 lg:py-20; }
 
-  .headline { @apply font-display text-3xl leading-[1.05] tracking-[-0.02em] text-neutral-950 sm:text-4xl; }
-  .subhead { @apply mt-4 max-w-3xl text-base leading-relaxed text-neutral-600; }
+  .headline { @apply font-display text-3xl leading-[1.05] tracking-[-0.02em] text-noir-900 sm:text-4xl; }
+  .subhead { @apply mt-4 max-w-3xl text-base leading-relaxed text-cocoa-500; }
 
-  .btn-primary { @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition bg-neutral-950 text-white hover:bg-neutral-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-950; }
-  .btn-ghost { @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition border border-neutral-200 bg-white hover:bg-neutral-50; }
+  .btn-primary { @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-xs font-medium tracking-[0.22em] uppercase transition bg-noir-900 text-sand-50 hover:bg-noir-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-500; }
+  .btn-ghost { @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-xs font-medium tracking-[0.22em] uppercase transition border border-brass-200/60 bg-transparent text-noir-900 hover:bg-sand-100; }
 
-  .hairline { @apply h-px w-full bg-neutral-200; }
+  .hairline { @apply h-px w-full bg-cocoa-200/55; }
+
+  .kicker { @apply font-caps text-xs tracking-[0.34em] uppercase text-brass-200; }
 }

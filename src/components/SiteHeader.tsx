@@ -43,7 +43,7 @@ export function SiteHeader() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white/85 backdrop-blur">
+      <header className="sticky top-0 z-50 bg-sand-50/75 backdrop-blur">
         <div className="container-pad">
           <div className="flex h-16 items-center justify-between">
             <button
@@ -52,7 +52,7 @@ export function SiteHeader() {
               className="text-left"
               aria-label="Harishshankar Photography"
             >
-              <div className="font-display text-xl tracking-[-0.02em] text-neutral-950">
+              <div className="font-display text-xl tracking-[-0.02em] text-noir-900">
                 Harishshankar Photography
               </div>
             </button>
@@ -63,7 +63,7 @@ export function SiteHeader() {
                   key={l.label}
                   type="button"
                   onClick={() => scrollToHash(l.href)}
-                  className="text-neutral-900 hover:opacity-70 transition"
+                  className="text-noir-900 hover:opacity-70 transition"
                 >
                   {l.label}
                 </button>
@@ -71,7 +71,7 @@ export function SiteHeader() {
               <button
                 type="button"
                 onClick={() => setOpen(true)}
-                className="text-neutral-900 hover:opacity-70 transition"
+                className="text-noir-900 hover:opacity-70 transition"
               >
                 More
               </button>
@@ -80,7 +80,7 @@ export function SiteHeader() {
             <button
               type="button"
               onClick={() => setOpen(true)}
-              className="md:hidden rounded-full border border-neutral-200 px-4 py-2 text-sm hover:bg-neutral-50 transition"
+              className="md:hidden rounded-full border border-cocoa-200/60 px-4 py-2 text-sm hover:bg-sand-100 transition"
               aria-label="Open menu"
             >
               Open Menu
@@ -93,20 +93,20 @@ export function SiteHeader() {
       <AnimatePresence>
         {open ? (
           <motion.div
-            className="fixed inset-0 z-[100] bg-white"
+            className="fixed inset-0 z-[100] bg-sand-50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <div className="container-pad">
               <div className="flex h-16 items-center justify-between">
-                <div className="font-display text-xl tracking-[-0.02em] text-neutral-950">
+                <div className="font-display text-xl tracking-[-0.02em] text-noir-900">
                   Harishshankar Photography
                 </div>
                 <button
                   type="button"
                   onClick={() => setOpen(false)}
-                  className="inline-flex items-center gap-2 rounded-full border border-neutral-200 px-4 py-2 text-sm hover:bg-neutral-50 transition"
+                  className="inline-flex items-center gap-2 rounded-full border border-cocoa-200/60 px-4 py-2 text-sm hover:bg-sand-100 transition"
                   aria-label="Close menu"
                 >
                   <FiX />
@@ -117,7 +117,7 @@ export function SiteHeader() {
 
               <div className="grid gap-10 py-10 md:grid-cols-2">
                 <div>
-                  <div className="text-xs font-medium tracking-[0.22em] uppercase text-neutral-500">
+                  <div className="text-xs font-medium tracking-[0.22em] uppercase text-cocoa-500">
                     Menu
                   </div>
                   <div className="mt-5 grid gap-3">
@@ -129,7 +129,7 @@ export function SiteHeader() {
                           setOpen(false)
                           scrollToHash(l.href)
                         }}
-                        className="text-left font-display text-3xl tracking-[-0.02em] text-neutral-950 hover:opacity-70 transition"
+                        className="text-left font-display text-3xl tracking-[-0.02em] text-noir-900 hover:opacity-70 transition"
                       >
                         {l.label}
                       </button>
@@ -138,7 +138,7 @@ export function SiteHeader() {
                 </div>
 
                 <div>
-                  <div className="text-xs font-medium tracking-[0.22em] uppercase text-neutral-500">
+                  <div className="text-xs font-medium tracking-[0.22em] uppercase text-cocoa-500">
                     More
                   </div>
                   <div className="mt-5 grid gap-2">
@@ -150,14 +150,14 @@ export function SiteHeader() {
                           setOpen(false)
                           scrollToHash(l.href)
                         }}
-                        className="text-left text-lg text-neutral-900 hover:opacity-70 transition"
+                        className="text-left text-lg text-noir-900 hover:opacity-70 transition"
                       >
                         {l.label}
                       </button>
                     ))}
                   </div>
 
-                  <div className="mt-10 text-sm text-neutral-600">
+                  <div className="mt-10 text-sm text-cocoa-500">
                     Chennai • Bangalore • Destination
                     <div className="mt-2">hello@harishshankarphoto.com</div>
                     <div className="mt-1">+91 90000 00000</div>

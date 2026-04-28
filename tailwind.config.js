@@ -6,19 +6,38 @@ export default {
   theme: {
     extend: {
       colors: {
-        cream: { 50: '#FFFBF5', 100: '#FBF4EA' },
-        beige: { 50: '#FAF2EA', 100: '#F1E5D7', 200: '#E8D5BF' },
-        blush: { 50: '#FFF5F7', 100: '#FBE6EA', 200: '#F5C9D3', 500: '#D9859A' },
-        gold: { 50: '#FFF9E6', 100: '#FDECC3', 500: '#C9A227', 700: '#8D6B13' },
-        ink: { 50: '#F6F3F1', 100: '#E7E0DB', 300: '#8A7E78', 700: '#2A2423', 900: '#120F10' },
+        sand: {
+          50: '#FBF7F1',
+          100: '#F2E9DD',
+          200: '#E7D8C4',
+        },
+        cocoa: {
+          50: '#F5F1EC',
+          200: '#CBBBA8',
+          500: '#7A6B5B',
+        },
+        olive: {
+          700: '#2A2A1F',
+          900: '#191A12',
+        },
+        noir: {
+          700: '#151412',
+          900: '#0C0B0A',
+        },
+        brass: {
+          50: '#FFF7E1',
+          200: '#EAD39B',
+          500: '#C2A35B',
+        },
       },
       fontFamily: {
         display: ['"Cormorant Garamond"', 'serif'],
+        caps: ['Cinzel', 'serif'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
-        glow: '0 0 0 1px rgba(201, 162, 39, 0.25), 0 20px 60px rgba(18, 15, 16, 0.18)',
-        soft: '0 12px 40px rgba(18, 15, 16, 0.12)',
+        glow: '0 0 0 1px rgba(194, 163, 91, 0.26), 0 20px 60px rgba(12, 11, 10, 0.22)',
+        soft: '0 12px 40px rgba(12, 11, 10, 0.18)',
       },
       backgroundImage: {
         'film-grain':
