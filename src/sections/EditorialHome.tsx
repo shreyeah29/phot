@@ -60,31 +60,31 @@ export function EditorialHome() {
 
   return (
     <main id="home">
-      <section className="relative">
-        <div className="container-pad">
-          <div className="relative overflow-hidden bg-noir-900">
-            <div ref={emblaRef}>
-              <div className="flex">
-                {slides.map((s) => (
-                  <div key={s.id} className="min-w-0 flex-[0_0_100%]">
-                    <img
-                      src={s.src}
-                      alt={s.alt}
-                      className="h-[76vh] min-h-[520px] w-full object-cover"
-                      loading="eager"
-                      decoding="async"
-                    />
-                  </div>
-                ))}
-              </div>
+      <section className="relative h-[calc(100dvh-4rem)] min-h-[640px]">
+        <div className="relative h-full w-full overflow-hidden bg-noir-900">
+          <div ref={emblaRef} className="h-full">
+            <div className="flex h-full">
+              {slides.map((s) => (
+                <div key={s.id} className="min-w-0 flex-[0_0_100%]">
+                  <img
+                    src={s.src}
+                    alt={s.alt}
+                    className="h-full w-full object-cover"
+                    loading="eager"
+                    decoding="async"
+                  />
+                </div>
+              ))}
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10">
+          </div>
+
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/12 to-transparent" />
+
+          <div className="absolute inset-x-0 bottom-0 pb-10 sm:pb-14">
+            <div className="container-pad">
               <Reveal>
                 <div className="max-w-3xl text-white">
-                  <div className="kicker text-white/80">
-                    Harishshankar Photography
-                  </div>
+                  <div className="kicker text-white/80">Harishshankar Photography</div>
                   <h1 className="mt-4 font-caps text-4xl leading-[1.02] tracking-[0.08em] sm:text-6xl">
                     Capturing love stories with restraint, warmth, and cinema.
                   </h1>
@@ -111,22 +111,20 @@ export function EditorialHome() {
                 </div>
               </Reveal>
             </div>
+          </div>
 
-            <div className="absolute bottom-4 right-4 hidden items-center gap-2 sm:flex">
-              {slides.map((s, idx) => (
-                <button
-                  key={s.id}
-                  type="button"
-                  aria-label={`Go to hero image ${idx + 1}`}
-                  onClick={() => emblaApi?.scrollTo(idx)}
-                  className={
-                    selected === idx
-                      ? 'h-1.5 w-10 bg-brass-200/90'
-                      : 'h-1.5 w-3 bg-white/35'
-                  }
-                />
-              ))}
-            </div>
+          <div className="absolute bottom-4 right-4 hidden items-center gap-2 sm:flex">
+            {slides.map((s, idx) => (
+              <button
+                key={s.id}
+                type="button"
+                aria-label={`Go to hero image ${idx + 1}`}
+                onClick={() => emblaApi?.scrollTo(idx)}
+                className={
+                  selected === idx ? 'h-1.5 w-10 bg-brass-200/90' : 'h-1.5 w-3 bg-white/35'
+                }
+              />
+            ))}
           </div>
         </div>
       </section>
