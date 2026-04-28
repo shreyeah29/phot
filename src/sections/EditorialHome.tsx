@@ -12,23 +12,28 @@ export function EditorialHome() {
     () => [
       {
         id: 'h-1',
-        src: '/portfolio/01.png',
-        alt: 'Wedding stage and decor',
+        src: '/portfolio/12.png',
+        alt: 'Wedding rituals overhead frame',
       },
       {
         id: 'h-2',
-        src: '/portfolio/02.png',
-        alt: 'Couple under hanging florals',
+        src: '/portfolio/13.png',
+        alt: 'Wedding couple under floral decor',
       },
       {
         id: 'h-3',
-        src: '/portfolio/04.png',
-        alt: 'Couple portrait with petals',
+        src: '/portfolio/14.png',
+        alt: 'Couple seated during ceremony',
       },
       {
         id: 'h-4',
-        src: '/portfolio/11.png',
-        alt: 'Wedding details',
+        src: '/portfolio/15.png',
+        alt: 'Bride and groom during varmala',
+      },
+      {
+        id: 'h-5',
+        src: '/portfolio/16.png',
+        alt: 'Couple celebration portrait',
       },
     ],
     [],
