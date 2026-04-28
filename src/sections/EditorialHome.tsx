@@ -12,23 +12,23 @@ export function EditorialHome() {
     () => [
       {
         id: 'h-1',
-        src: 'https://images.unsplash.com/photo-1523437237164-d442d57cc3c9?auto=format&fit=crop&w=3200&q=85',
-        alt: 'Indian wedding ceremony moment',
+        src: '/portfolio/01.png',
+        alt: 'Wedding stage and decor',
       },
       {
         id: 'h-2',
-        src: 'https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=3200&q=85',
-        alt: 'Wedding couple walking in warm light',
+        src: '/portfolio/02.png',
+        alt: 'Couple under hanging florals',
       },
       {
         id: 'h-3',
-        src: 'https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?auto=format&fit=crop&w=3200&q=85',
-        alt: 'Bride close portrait in warm tones',
+        src: '/portfolio/04.png',
+        alt: 'Couple portrait with petals',
       },
       {
         id: 'h-4',
-        src: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=3200&q=85',
-        alt: 'Couple portrait in cinematic tones',
+        src: '/portfolio/11.png',
+        alt: 'Wedding details',
       },
     ],
     [],
