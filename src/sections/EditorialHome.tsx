@@ -17,13 +17,18 @@ export function EditorialHome() {
       },
       {
         id: 'h-2',
+        src: 'https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=3200&q=85',
+        alt: 'Wedding couple walking in warm light',
+      },
+      {
+        id: 'h-3',
         src: 'https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?auto=format&fit=crop&w=3200&q=85',
         alt: 'Bride close portrait in warm tones',
       },
       {
-        id: 'h-3',
-        src: 'https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=3200&q=85',
-        alt: 'Couple walking in golden light',
+        id: 'h-4',
+        src: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=3200&q=85',
+        alt: 'Couple portrait in cinematic tones',
       },
     ],
     [],
