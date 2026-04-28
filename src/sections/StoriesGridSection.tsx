@@ -11,98 +11,98 @@ const tiles: Tile[] = [
     id: 't-1',
     src: '/portfolio/13.png',
     alt: 'Wedding couple under floral decor',
-    className: 'sm:col-span-1 sm:row-span-2 lg:col-span-1 lg:row-span-2',
+    className: 'sm:col-span-1 sm:row-span-2 lg:col-start-1 lg:row-start-1 lg:row-span-2',
   },
   {
     kind: 'image',
     id: 't-2',
     src: '/portfolio/12.png',
     alt: 'Wedding rituals overhead frame',
-    className: 'sm:col-span-1 sm:row-span-1 lg:col-span-1 lg:row-span-1',
+    className: 'sm:col-span-1 sm:row-span-1 lg:col-start-2 lg:row-start-1',
   },
   {
     kind: 'image',
     id: 't-3',
     src: '/portfolio/15.png',
     alt: 'Bride and groom during varmala',
-    className: 'sm:col-span-1 sm:row-span-1 lg:col-span-1 lg:row-span-1',
+    className: 'sm:col-span-1 sm:row-span-1 lg:col-start-3 lg:row-start-1',
   },
   {
     kind: 'image',
     id: 't-4',
     src: '/portfolio/01.png',
     alt: 'Wedding stage and decor',
-    className: 'sm:col-span-1 sm:row-span-1 lg:col-span-1 lg:row-span-1',
+    className: 'sm:col-span-1 sm:row-span-1 lg:col-start-4 lg:row-start-1',
   },
   {
     kind: 'image',
     id: 't-5',
     src: '/portfolio/03.png',
     alt: 'Wedding night celebration',
-    className: 'sm:col-span-1 sm:row-span-1 lg:col-span-1 lg:row-span-1',
+    className: 'sm:col-span-1 sm:row-span-1 lg:col-start-5 lg:row-start-1',
   },
   {
     kind: 'text',
     id: 't-6',
     title: 'Some of the most “ICONIC”',
     subtitle: 'wedding images',
-    className: 'sm:col-span-1 sm:row-span-1 lg:col-span-1 lg:row-span-1',
+    className: 'sm:col-span-1 sm:row-span-1 lg:col-start-3 lg:row-start-2',
   },
   {
     kind: 'image',
     id: 't-7',
     src: '/portfolio/14.png',
     alt: 'Couple seated during ceremony',
-    className: 'sm:col-span-1 sm:row-span-1 lg:col-span-1 lg:row-span-1',
+    className: 'sm:col-span-1 sm:row-span-1 lg:col-start-4 lg:row-start-2',
   },
   {
     kind: 'image',
     id: 't-8',
     src: '/portfolio/06.png',
     alt: 'Wedding couple embrace',
-    className: 'sm:col-span-1 sm:row-span-1 lg:col-span-1 lg:row-span-1',
+    className: 'sm:col-span-1 sm:row-span-1 lg:col-start-5 lg:row-start-2',
   },
   {
     kind: 'image',
     id: 't-9',
     src: '/portfolio/16.png',
     alt: 'Couple celebration portrait',
-    className: 'sm:col-span-1 sm:row-span-1 lg:col-span-1 lg:row-span-1',
+    className: 'sm:col-span-1 sm:row-span-1 lg:col-start-2 lg:row-start-2',
   },
   {
     kind: 'image',
     id: 't-10',
     src: '/portfolio/04.png',
     alt: 'Couple portrait with petals',
-    className: 'sm:col-span-1 sm:row-span-1 lg:col-span-1 lg:row-span-1',
+    className: 'sm:col-span-1 sm:row-span-1 lg:col-start-1 lg:row-start-3',
   },
   {
     kind: 'image',
     id: 't-11',
     src: '/portfolio/07.png',
     alt: 'Wedding details closeup',
-    className: 'sm:col-span-1 sm:row-span-1 lg:col-span-1 lg:row-span-1',
+    className: 'sm:col-span-1 sm:row-span-1 lg:col-start-2 lg:row-start-3',
   },
   {
     kind: 'image',
     id: 't-12',
     src: '/portfolio/08.png',
     alt: 'Couple by the courtyard',
-    className: 'sm:col-span-1 sm:row-span-1 lg:col-span-1 lg:row-span-1',
+    className: 'sm:col-span-1 sm:row-span-1 lg:col-start-3 lg:row-start-3',
   },
   {
     kind: 'image',
     id: 't-13',
     src: '/portfolio/09.png',
     alt: 'Bride and groom close moment',
-    className: 'sm:col-span-1 sm:row-span-1 lg:col-span-1 lg:row-span-1',
+    className: 'sm:col-span-1 sm:row-span-1 lg:col-start-4 lg:row-start-3',
   },
   {
     kind: 'image',
     id: 't-14',
     src: '/portfolio/10.png',
     alt: 'Bride portrait indoors',
-    className: 'sm:col-span-1 sm:row-span-1 lg:col-span-1 lg:row-span-1',
+    className: 'sm:col-span-1 sm:row-span-1 lg:col-start-5 lg:row-start-3',
   },
 ]
 
@@ -119,7 +119,7 @@ export function StoriesGridSection() {
           </div>
         </Reveal>
 
-        <div className="mt-10 grid grid-cols-2 gap-2 sm:grid-cols-3 sm:auto-rows-[190px] sm:gap-2.5 lg:grid-cols-5 lg:auto-rows-[210px]">
+        <div className="mt-10 grid grid-cols-2 gap-2 sm:grid-cols-3 sm:auto-rows-[190px] sm:gap-2.5 lg:grid-cols-5 lg:auto-rows-[210px] lg:grid-flow-dense">
           {tiles.map((t, idx) => (
             <Reveal key={t.id} delay={0.02 * idx}>
               {t.kind === 'image' ? (

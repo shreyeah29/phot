@@ -3,7 +3,6 @@ import { AnimatePresence } from 'framer-motion'
 import { IntroLoader } from './components/IntroLoader'
 import { SiteHeader } from './components/SiteHeader'
 import { EditorialHome } from './sections/EditorialHome'
-import { InstagramEmbedsSection } from './sections/InstagramEmbedsSection'
 import { ContactSection } from './sections/ContactSection'
 
 function App() {
@@ -20,9 +19,6 @@ function App() {
 
       <SiteHeader />
       <EditorialHome />
-      <div id="portfolio">
-        <InstagramEmbedsSection />
-      </div>
       <ContactSection />
     </div>
   )

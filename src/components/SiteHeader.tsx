@@ -5,7 +5,7 @@ import { FiX } from 'react-icons/fi'
 type NavLink = { label: string; href: string }
 
 const primary: NavLink[] = [
-  { label: 'Photography', href: '#portfolio' },
+  { label: 'Photography', href: '#stories' },
   { label: 'Stories', href: '#stories' },
   { label: 'Contact Us', href: '#contact' },
   { label: 'About', href: '#home' },
