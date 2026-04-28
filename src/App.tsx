@@ -3,8 +3,8 @@ import { AnimatePresence } from 'framer-motion'
 import { IntroLoader } from './components/IntroLoader'
 import { SiteHeader } from './components/SiteHeader'
 import { EditorialHome } from './sections/EditorialHome'
-import { FilmsAndContact } from './sections/FilmsAndContact'
 import { InstagramEmbedsSection } from './sections/InstagramEmbedsSection'
+import { ContactSection } from './sections/ContactSection'
 
 function App() {
   const [ready, setReady] = useState(false)
@@ -23,7 +23,7 @@ function App() {
       <div id="portfolio">
         <InstagramEmbedsSection />
       </div>
-      <FilmsAndContact />
+      <ContactSection />
     </div>
   )
 }

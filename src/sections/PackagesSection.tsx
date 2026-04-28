@@ -40,7 +40,7 @@ function scrollToId(id: string) {
 
 export function PackagesSection() {
   return (
-    <section className="section-pad">
+    <section id="packages" className="section-pad">
       <div className="container-pad">
         <Reveal>
           <div className="text-center">

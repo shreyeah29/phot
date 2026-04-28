@@ -1,24 +1,73 @@
 import { Reveal } from '../components/Reveal'
-import { editorialGrid, featuredStories } from '../data/editorial'
 import { PackagesSection } from './PackagesSection'
+import useEmblaCarousel from 'embla-carousel-react'
+import { useEffect, useMemo, useState } from 'react'
 
 function scrollToId(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 
 export function EditorialHome() {
+  const slides = useMemo(
+    () => [
+      {
+        id: 'h-1',
+        src: 'https://images.unsplash.com/photo-1523437237164-d442d57cc3c9?auto=format&fit=crop&w=3200&q=85',
+        alt: 'Indian wedding ceremony moment',
+      },
+      {
+        id: 'h-2',
+        src: 'https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?auto=format&fit=crop&w=3200&q=85',
+        alt: 'Bride close portrait in warm tones',
+      },
+      {
+        id: 'h-3',
+        src: 'https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=3200&q=85',
+        alt: 'Couple walking in golden light',
+      },
+    ],
+    [],
+  )
+
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
+  const [selected, setSelected] = useState(0)
+
+  useEffect(() => {
+    if (!emblaApi) return
+    const onSelect = () => setSelected(emblaApi.selectedScrollSnap())
+    emblaApi.on('select', onSelect)
+    onSelect()
+    return () => {
+      emblaApi.off('select', onSelect)
+    }
+  }, [emblaApi])
+
+  useEffect(() => {
+    if (!emblaApi) return
+    const t = window.setInterval(() => emblaApi.scrollNext(), 4200)
+    return () => window.clearInterval(t)
+  }, [emblaApi])
+
   return (
     <main id="home">
       <section className="relative">
         <div className="container-pad">
-          <div className="relative overflow-hidden bg-neutral-100">
-            <img
-              src="https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=3200&q=85"
-              alt="Cinematic couple portrait"
-              className="h-[76vh] min-h-[520px] w-full object-cover"
-              loading="eager"
-              decoding="async"
-            />
+          <div className="relative overflow-hidden bg-noir-900">
+            <div ref={emblaRef}>
+              <div className="flex">
+                {slides.map((s) => (
+                  <div key={s.id} className="min-w-0 flex-[0_0_100%]">
+                    <img
+                      src={s.src}
+                      alt={s.alt}
+                      className="h-[76vh] min-h-[520px] w-full object-cover"
+                      loading="eager"
+                      decoding="async"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10">
               <Reveal>
@@ -36,7 +85,7 @@ export function EditorialHome() {
                   <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                     <button
                       type="button"
-                      onClick={() => scrollToId('photography')}
+                      onClick={() => scrollToId('portfolio')}
                       className="btn-primary"
                     >
                       View Photography
@@ -51,6 +100,22 @@ export function EditorialHome() {
                   </div>
                 </div>
               </Reveal>
+            </div>
+
+            <div className="absolute bottom-4 right-4 hidden items-center gap-2 sm:flex">
+              {slides.map((s, idx) => (
+                <button
+                  key={s.id}
+                  type="button"
+                  aria-label={`Go to hero image ${idx + 1}`}
+                  onClick={() => emblaApi?.scrollTo(idx)}
+                  className={
+                    selected === idx
+                      ? 'h-1.5 w-10 bg-brass-200/90'
+                      : 'h-1.5 w-3 bg-white/35'
+                  }
+                />
+              ))}
             </div>
           </div>
         </div>
@@ -73,84 +138,6 @@ export function EditorialHome() {
               </p>
             </div>
           </Reveal>
-        </div>
-      </section>
-
-      <section className="section-pad">
-        <div className="container-pad">
-          <Reveal>
-            <p className="max-w-4xl text-base leading-relaxed text-noir-900">
-              Considered a modern, cinematic wedding photography brand,{' '}
-              <span className="font-medium text-noir-900">Harishshankar Photography</span>{' '}
-              documents celebrations with timeless tones and honest emotion—crafted like an editorial,
-              felt like a memory.
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
-      <section id="photography" className="pb-10 sm:pb-12">
-        <div className="container-pad">
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {editorialGrid.map((img, idx) => (
-              <Reveal key={img.id} delay={0.02 * idx}>
-                <div className="group relative overflow-hidden bg-sand-100">
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    loading="lazy"
-                    decoding="async"
-                    className="h-[360px] w-full object-cover transition duration-700 group-hover:scale-[1.03]"
-                  />
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="editorial" className="section-pad">
-        <div className="container-pad">
-          <Reveal>
-            <div className="flex items-end justify-between gap-6">
-              <div>
-                <div className="text-xs font-medium tracking-[0.22em] uppercase text-cocoa-500">
-                  Featured
-                </div>
-                <h2 className="mt-4 headline">Selected weddings</h2>
-              </div>
-              <button type="button" className="btn-ghost">
-                View All
-              </button>
-            </div>
-          </Reveal>
-
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
-            {featuredStories.map((s, idx) => (
-              <Reveal key={s.id} delay={0.04 * idx}>
-                <article className="group">
-                  <div className="overflow-hidden bg-sand-100">
-                    <img
-                      src={s.cover}
-                      alt={s.title}
-                      loading="lazy"
-                      decoding="async"
-                      className="h-[320px] w-full object-cover transition duration-700 group-hover:scale-[1.03]"
-                    />
-                  </div>
-                  <div className="mt-4 text-xs tracking-[0.18em] uppercase text-cocoa-500">
-                    {s.dateLabel}
-                  </div>
-                  <div className="mt-2 font-display text-2xl tracking-[-0.02em] text-noir-900">
-                    {s.title}
-                  </div>
-                  <div className="mt-1 text-sm text-cocoa-500">
-                    {s.location ? s.location : 'India & Destination'}
-                  </div>
-                </article>
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
     </main>
