@@ -6,7 +6,7 @@ type NavLink = { label: string; href: string }
 
 const primary: NavLink[] = [
   { label: 'Photography', href: '#portfolio' },
-  { label: 'Packages', href: '#packages' },
+  { label: 'Stories', href: '#stories' },
   { label: 'Contact Us', href: '#contact' },
   { label: 'About', href: '#home' },
 ]

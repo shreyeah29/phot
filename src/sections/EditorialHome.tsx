@@ -1,7 +1,7 @@
 import { Reveal } from '../components/Reveal'
-import { PackagesSection } from './PackagesSection'
 import useEmblaCarousel from 'embla-carousel-react'
 import { useEffect, useMemo, useState } from 'react'
+import { StoriesGridSection } from './StoriesGridSection'
 
 function scrollToId(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -126,7 +126,7 @@ export function EditorialHome() {
         </div>
       </section>
 
-      <PackagesSection />
+      <StoriesGridSection />
 
       <section className="relative overflow-hidden bg-olive-900">
         <div className="absolute inset-0 opacity-45 mix-blend-overlay bg-film-grain" />
