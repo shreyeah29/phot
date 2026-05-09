@@ -38,7 +38,7 @@ export function StoriesListSection() {
                     {s.tag}
                   </div>
                 ) : (
-                  <div className="mt-3 text-xs tracking-[0.18em] uppercase text-cocoa-500">
+                  <div className="mt-3 text-xs tracking-[0.18em] uppercase text-noir-900/55">
                     Wedding Story
                   </div>
                 )}

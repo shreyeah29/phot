@@ -28,7 +28,7 @@ export function WhoSaidWhatSection() {
             <h2 className="mt-4 font-caps text-4xl tracking-[0.12em] text-noir-900 sm:text-5xl">
               The world spoke about us
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-cocoa-500 sm:text-base">
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-noir-900/70">
               (Replace these with your real client words anytime.)
             </p>
           </div>
@@ -39,7 +39,7 @@ export function WhoSaidWhatSection() {
             <Reveal key={t.name} delay={0.03 * idx}>
               <div className="border border-cocoa-200/55 bg-sand-50/40 p-7">
                 <div className="font-display text-4xl leading-none text-brass-200/60">“</div>
-                <p className="mt-4 text-sm leading-relaxed text-cocoa-500 sm:text-base">{t.quote}</p>
+                <p className="mt-4 text-base leading-relaxed text-noir-900/80">{t.quote}</p>
                 <div className="mt-6 text-xs tracking-[0.22em] uppercase text-cocoa-500">
                   {t.name}
                 </div>

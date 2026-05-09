@@ -25,12 +25,12 @@
   .section-pad { @apply py-14 sm:py-16 lg:py-20; }
 
   .headline { @apply font-display text-3xl leading-[1.05] tracking-[-0.02em] text-noir-900 sm:text-4xl; }
-  .subhead { @apply mt-4 max-w-3xl text-base leading-relaxed text-cocoa-500; }
+  .subhead { @apply mt-4 max-w-3xl text-base leading-relaxed text-noir-900/70; }
 
   .btn-primary { @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-xs font-medium tracking-[0.22em] uppercase transition bg-noir-900 text-sand-50 hover:bg-noir-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-500; }
   .btn-ghost { @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-xs font-medium tracking-[0.22em] uppercase transition border border-brass-200/60 bg-transparent text-noir-900 hover:bg-sand-100; }
 
   .hairline { @apply h-px w-full bg-cocoa-200/55; }
 
-  .kicker { @apply font-caps text-xs tracking-[0.34em] uppercase text-brass-200; }
+  .kicker { @apply font-caps text-xs tracking-[0.34em] uppercase text-noir-900/70; }
 }
