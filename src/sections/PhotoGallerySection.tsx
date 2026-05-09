@@ -58,18 +58,6 @@ export function PhotoGallerySection() {
             </Reveal>
           ))}
         </div>
-
-        <Reveal delay={0.06}>
-          <div className="mt-10 overflow-hidden ring-1 ring-black/10">
-            <img
-              src="/stories-collage.png"
-              alt="Stories collage"
-              loading="lazy"
-              decoding="async"
-              className="w-full object-cover"
-            />
-          </div>
-        </Reveal>
       </div>
     </section>
   )
