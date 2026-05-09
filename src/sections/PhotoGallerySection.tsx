@@ -34,7 +34,7 @@ export function PhotoGallerySection() {
                 onClick={() =>
                   document.getElementById('book-us')?.scrollIntoView({ behavior: 'smooth' })
                 }
-                className="group relative aspect-square overflow-hidden bg-noir-900 ring-1 ring-black/10"
+                className="group relative block w-full aspect-square overflow-hidden bg-noir-900 ring-1 ring-black/10"
                 aria-label={`Open ${c.title}`}
               >
                 <img
