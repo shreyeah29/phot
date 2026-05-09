@@ -1,7 +1,11 @@
 import { Reveal } from '../components/Reveal'
 import useEmblaCarousel from 'embla-carousel-react'
 import { useEffect, useMemo, useState } from 'react'
-import { StoriesGridSection } from './StoriesGridSection'
+import { KnowUsSection } from './KnowUsSection'
+import { PhotoGallerySection } from './PhotoGallerySection'
+import { StoriesListSection } from './StoriesListSection'
+import { WhoSaidWhatSection } from './WhoSaidWhatSection'
+import { CareersSection } from './CareersSection'
 
 function scrollToId(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -129,25 +133,11 @@ export function EditorialHome() {
         </div>
       </section>
 
-      <StoriesGridSection />
-
-      <section className="relative overflow-hidden bg-olive-900">
-        <div className="absolute inset-0 opacity-45 mix-blend-overlay bg-film-grain" />
-        <div className="container-pad py-16 sm:py-20">
-          <Reveal>
-            <div className="mx-auto max-w-4xl text-center text-sand-50">
-              <div className="kicker">Memorable Moments</div>
-              <h2 className="mt-4 font-caps text-3xl tracking-[0.14em] sm:text-4xl">
-                A calm, cinematic approach to your story.
-              </h2>
-              <p className="mt-4 text-sm leading-relaxed text-sand-50/75 sm:text-base">
-                From the quiet glance to the wild celebration—each frame is composed with warmth,
-                soft contrast, and timeless tones.
-              </p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+      <KnowUsSection />
+      <PhotoGallerySection />
+      <StoriesListSection />
+      <WhoSaidWhatSection />
+      <CareersSection />
     </main>
   )
 }

@@ -5,10 +5,13 @@ import { FiX } from 'react-icons/fi'
 type NavLink = { label: string; href: string }
 
 const primary: NavLink[] = [
-  { label: 'Photography', href: '#stories' },
+  { label: 'Home', href: '#home' },
+  { label: 'Know us Moreeee', href: '#know-us' },
+  { label: 'Photo Gallery', href: '#gallery' },
   { label: 'Stories', href: '#stories' },
-  { label: 'Contact Us', href: '#contact' },
-  { label: 'About', href: '#home' },
+  { label: 'Who Said What', href: '#testimonials' },
+  { label: 'Careers', href: '#careers' },
+  { label: 'Book Us Now', href: '#book-us' },
 ]
 
 const more: NavLink[] = [
