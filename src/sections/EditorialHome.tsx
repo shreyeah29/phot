@@ -6,42 +6,14 @@ import { PhotoGallerySection } from './PhotoGallerySection'
 import { StoriesListSection } from './StoriesListSection'
 import { WhoSaidWhatSection } from './WhoSaidWhatSection'
 import { CareersSection } from './CareersSection'
+import { heroSlides } from '../data/portfolio'
 
 function scrollToId(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 
 export function EditorialHome() {
-  const slides = useMemo(
-    () => [
-      {
-        id: 'h-1',
-        src: '/portfolio/12.png',
-        alt: 'Wedding rituals overhead frame',
-      },
-      {
-        id: 'h-2',
-        src: '/portfolio/13.png',
-        alt: 'Wedding couple under floral decor',
-      },
-      {
-        id: 'h-3',
-        src: '/portfolio/14.png',
-        alt: 'Couple seated during ceremony',
-      },
-      {
-        id: 'h-4',
-        src: '/portfolio/15.png',
-        alt: 'Bride and groom during varmala',
-      },
-      {
-        id: 'h-5',
-        src: '/portfolio/16.png',
-        alt: 'Couple celebration portrait',
-      },
-    ],
-    [],
-  )
+  const slides = useMemo(() => [...heroSlides], [])
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
   const [selected, setSelected] = useState(0)

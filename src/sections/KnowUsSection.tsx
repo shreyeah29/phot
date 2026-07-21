@@ -1,4 +1,5 @@
 import { Reveal } from '../components/Reveal'
+import { knowUsPhoto } from '../data/portfolio'
 
 export function KnowUsSection() {
   return (
@@ -95,15 +96,15 @@ export function KnowUsSection() {
               <div className="sticky top-24 space-y-4">
                 <div className="overflow-hidden ring-1 ring-black/10">
                   <img
-                    src="/portfolio/08.png"
-                    alt="Harish & Shankar — placeholder"
+                    src={knowUsPhoto}
+                    alt="Harishankar Photography — wedding portrait"
                     loading="lazy"
                     decoding="async"
                     className="aspect-[4/5] w-full object-cover"
                   />
                 </div>
                 <div className="text-xs tracking-[0.22em] uppercase text-noir-900/55">
-                  (Photo of Harish &amp; Shankar in Kashmir — to be added)
+                  (Photo of Harish &amp; Shankar in Kashmir — coming soon)
                 </div>
 
                 <div className="border border-cocoa-200/55 bg-sand-50 px-6 py-6 sm:px-7">

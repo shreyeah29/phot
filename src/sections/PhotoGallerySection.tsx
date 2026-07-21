@@ -1,13 +1,5 @@
 import { Reveal } from '../components/Reveal'
-
-const categories = [
-  { title: 'Pre Weddings', subtitle: 'The world spoke about us', cover: '/portfolio/09.png' },
-  { title: 'Weddings', subtitle: 'Traditions & emotions', cover: '/portfolio/15.png' },
-  { title: 'Fashion', subtitle: 'Editorial frames', cover: '/portfolio/10.png' },
-  { title: 'Kids', subtitle: 'Little moments', cover: '/portfolio/05.png' },
-  { title: 'Overseas', subtitle: 'Soumya Vish', cover: '/portfolio/02.png' },
-  { title: 'Food', subtitle: 'Details & textures', cover: '/portfolio/07.png' },
-] as const
+import { galleryCategories } from '../data/portfolio'
 
 export function PhotoGallerySection() {
   return (
@@ -27,7 +19,7 @@ export function PhotoGallerySection() {
         </Reveal>
 
         <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {categories.map((c, idx) => (
+          {galleryCategories.map((c, idx) => (
             <Reveal key={c.title} delay={0.03 * idx}>
               <button
                 type="button"
