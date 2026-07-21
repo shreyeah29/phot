@@ -17,4 +17,4 @@ export const galleryCategories = [
   { title: 'Food', subtitle: 'Details & textures', cover: '/portfolio/10.jpg' },
 ] as const
 
-export const knowUsPhoto = '/portfolio/know-us.png'
+export const knowUsPhoto = '/portfolio/know-us.jpg'

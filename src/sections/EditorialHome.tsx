@@ -40,14 +40,15 @@ export function EditorialHome() {
         <div className="relative h-full w-full overflow-hidden bg-noir-900">
           <div ref={emblaRef} className="h-full">
             <div className="flex h-full">
-              {slides.map((s) => (
+              {slides.map((s, idx) => (
                 <div key={s.id} className="min-w-0 flex-[0_0_100%]">
                   <img
                     src={s.src}
                     alt={s.alt}
                     className="h-full w-full object-cover"
-                    loading="eager"
+                    loading={idx === 0 ? 'eager' : 'lazy'}
                     decoding="async"
+                    fetchPriority={idx === 0 ? 'high' : 'auto'}
                   />
                 </div>
               ))}
